@@ -819,7 +819,7 @@ void GCodeExport::writeFXYZE(const Velocity& speed, const coord_t x, const coord
     if (e + current_e_offset != current_e_value)
     {
         const double output_e = (relative_extrusion)? e + current_e_offset - current_e_value : e + current_e_offset;
-        *output_stream << " " << extruder_attr[current_extruder].extruderCharacter << PrecisionedDouble{5, output_e};
+        *output_stream << " " << extruder_attr[current_extruder].extruderCharacter << PrecisionedDouble{14, output_e};
     }
     *output_stream << new_line;
     
